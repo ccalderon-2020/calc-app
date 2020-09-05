@@ -6,11 +6,10 @@ import './App.css'
 // Función flecha o Arrow Function
 const App = () => {
     //Lo que ejecuta la función
-
     console.log("Renderización de App")
     return (
     <main className='react-calculator' >
-        <Result/>
+        <Result />
         <div className="numbers">
             <button>1</button>
             <button>2</button>
