@@ -1,6 +1,8 @@
 // Importación
 import React from 'react'
 import Button from './components/Button'
+import Functions from './components/Functions'
+import MathOperations from './components/MathOperations'
 import Result from './components/Result'
 import './App.css'
 
@@ -29,18 +31,23 @@ const App = () => {
             <button>0</button>
         </div>
 
-        <div className="functions">
-            <button>Clear</button>
-            <button>r</button>
-        </div>
-        <div className="math-operations">
-            <button>+</button>
-            <button>-</button>
-            <button>*</button>
-            <button>/</button>
-            <button>=</button>
-        </div>
-    </main> )
+        <Functions
+            onContentClear={() => 
+                console.log("content clear")
+            }
+            onDelete={() => 
+                console.log("Delete") 
+
+            }
+        />
+        <MathOperations 
+            onClickOperation={operation => 
+                console.log("operations", operation)
+            } 
+            onClickEqual={equal=> 
+                console.log("equal", equal)} 
+        />
+    </main>)
 }
 
 // Exportación
